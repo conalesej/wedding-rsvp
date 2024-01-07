@@ -76,6 +76,26 @@ const Faqs = () => {
             </p>
           </p>
         </section>
+
+        <LeafDivider />
+
+        <section className={styles.faqSection}>
+          <header className={styles.question}>
+            What is the timeline of events on that day?
+          </header>
+          <p className={styles.answer}>To follow</p>
+        </section>
+
+        <LeafDivider />
+
+        <section className={styles.faqSection}>
+          <header className={styles.question}>Can I Bring a plus one? </header>
+          <p className={styles.answer}>
+            While we'd love to accommodate everyone, please <b>refrain</b> from
+            inviting additional guests <b>without prior arrangement</b> to
+            ensure our celebration goes as planned.
+          </p>
+        </section>
       </div>
     </main>
   );
