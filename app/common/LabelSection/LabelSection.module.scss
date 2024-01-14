@@ -1,0 +1,14 @@
+.main {
+  text-align: center;
+  line-height: 24px;
+  margin: 24px 0px;
+
+  span {
+    font-size: var(--subheader-font-size);
+    font-weight: bold;
+  }
+
+  .label {
+    font-size: var(--p-font-size);
+  }
+}

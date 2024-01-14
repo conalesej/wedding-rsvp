@@ -1,0 +1,188 @@
+.main {
+  background-image: var(--background-image-stripes);
+
+  padding: var(--mains-padding);
+  color: var(--main-text-color);
+
+  box-shadow: var(--box-shadow-md);
+  transform: rotateX(1deg);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  .wrapper {
+    max-width: 740px;
+    margin: 0px auto;
+
+    .themeContainer {
+      display: flex;
+      max-width: 355px;
+
+      justify-content: space-between;
+      align-items: center;
+
+      .themeImage {
+        --size: 83px;
+        height: var(--size);
+        width: var(--size);
+        outline: 1px solid #b08127;
+        border-radius: 50%;
+      }
+
+      @media all and (min-width: 720px) {
+        .themeImage {
+          --size: 99.6px;
+        }
+      }
+
+      @media all and (min-width: 1280px) {
+        .themeImage {
+          --size: 116.2px;
+        }
+      }
+      @media all and (min-width: 1920px) {
+        .themeImage {
+          --size: 132.8px;
+        }
+      }
+    }
+
+    @media all and (min-width: 355px) {
+      .themeContainer {
+        margin: 0 auto;
+      }
+    }
+
+    @media all and (min-width: 720px) {
+      .themeContainer {
+        margin: 0 auto;
+        max-width: 426px;
+      }
+    }
+
+    @media all and (min-width: 1280px) {
+      .themeContainer {
+        margin: 0 auto;
+        max-width: 497px;
+      }
+    }
+
+    @media all and (min-width: 1920px) {
+      .themeContainer {
+        margin: 0 auto;
+        max-width: 568px;
+      }
+    }
+
+    .genderAttire {
+      margin: 31px auto 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+      max-width: 420px;
+
+      > *:nth-child(odd) {
+        flex-basis: 49.5%;
+      }
+
+      .side {
+        text-align: center;
+      }
+
+      header {
+        font-size: var(--title-font-size);
+      }
+
+      p {
+        font-size: var(--p-font-size);
+      }
+    }
+
+    @media all and (min-width: 720px) {
+      .genderAttire {
+        max-width: 504px;
+      }
+    }
+
+    @media all and (min-width: 1280px) {
+      .genderAttire {
+        max-width: 588px;
+      }
+    }
+
+    @media all and (min-width: 1920px) {
+      .genderAttire {
+        max-width: 672px;
+      }
+    }
+
+    .restrictionAttire {
+      margin-top: 40px;
+      .colors {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        > * {
+          --size: 24px;
+          height: var(--size);
+          width: var(--size);
+          border: 2px solid #a0a0a0;
+          border-radius: 2px;
+          position: relative;
+        }
+
+        > *::after {
+          content: "X";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 16px; /* Adjust the font size as needed */
+          color: red; /* Adjust the color of the "X" */
+        }
+        .white {
+          background: white;
+        }
+
+        .black {
+          background: black;
+        }
+
+        .navy {
+          background: #191970;
+        }
+      }
+
+      @media all and (min-width: 720px) {
+        .colors {
+          gap: 14px;
+
+          > * {
+            --size: 28px;
+          }
+        }
+      }
+
+      @media all and (min-width: 1280px) {
+        .colors {
+          gap: 18px;
+
+          > * {
+            --size: 32px;
+          }
+        }
+      }
+
+      @media all and (min-width: 1920px) {
+        .colors {
+          gap: 22px;
+
+          > * {
+            --size: 36px;
+          }
+        }
+      }
+    }
+  }
+}

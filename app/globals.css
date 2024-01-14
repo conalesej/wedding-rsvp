@@ -7,6 +7,53 @@
 :root {
   --main-text-color: #43403f;
 
+  --background-image-stripes: url("https://www.transparenttextures.com/patterns/ag-square.png");
+
   --divider-color: #808080;
   --divider-opacity: 25%;
+
+  --box-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --drop-shadow-md: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07))
+    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
+
+  --p-font-size: 10px;
+  --header-font-size: 23px;
+  --subheader-font-size: 14px;
+  --title-font-size: 18px;
+
+  --mains-padding: 20px 31px 20px;
+}
+
+@media all and (min-width: 720px) {
+  :root {
+    --p-font-size: 12px;
+    --header-font-size: 27.6px;
+    --subheader-font-size: 16.8px;
+    --title-font-size: 21.6px;
+
+    --mains-padding: 30px 31px 30px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  :root {
+    --p-font-size: 14px;
+    --header-font-size: 32.2px;
+    --subheader-font-size: 19.6px;
+    --title-font-size: 25.2px;
+
+    --mains-padding: 40px 31px 40px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  :root {
+    --p-font-size: 16px;
+    --header-font-size: 36.8px;
+    --subheader-font-size: 22.4px;
+    --title-font-size: 28.8px;
+
+    --mains-padding: 50px 31px 50px;
+  }
 }

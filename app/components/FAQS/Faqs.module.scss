@@ -1,22 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 .main {
-  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  background-image: var(--background-image-stripes);
+
+  // background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  color: var(--main-text-color);
   background-color: #fffcf4;
-  padding: 20px 31px 20px;
+  padding: var(--mains-padding);
+
+  --cursive-font-size-sm: 16px;
+
   .wrapper {
     max-width: 740px;
     margin: 0px auto;
-
-    .titleHeader {
-      font-size: 23px;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .verticalDivider {
-      border: 1px solid var(--divider-color);
-      opacity: var(--divider-opacity);
-    }
 
     .faqSection {
       text-align: center;
@@ -24,18 +20,40 @@
       margin: 35px 0px;
 
       .question {
-        font-size: 14px;
+        font-size: var(--subheader-font-size);
         font-weight: bold;
       }
       .answer {
         margin-top: 4px;
-        font-size: 10px;
+        font-size: var(--p-font-size);
 
         .cursive {
           display: inline;
           font-family: "Great Vibes", cursive;
-          font-size: 16px;
+          font-size: var(--cursive-font-size-sm);
         }
+
+        @media all and (min-width: 720px) {
+          .cursive {
+            font-size: 19.2px;
+          }
+        }
+        @media all and (min-width: 1280px) {
+          .cursive {
+            font-size: 22.4px;
+          }
+        }
+        @media all and (min-width: 1920) {
+          .cursive {
+            font-size: 25.6px;
+          }
+        }
+        .underlined {
+          text-decoration: underline;
+        }
+      }
+      .italicized {
+        font-style: italic;
       }
     }
 
@@ -48,11 +66,28 @@
       height: 35px;
       margin: 0px auto;
 
-      filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
-        drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+      filter: var(--drop-shadow-md);
+    }
+
+    @media all and (min-width: 720px) {
+      .imageDivider {
+        width: 174px;
+        height: 43px;
+      }
+    }
+
+    @media all and (min-width: 1280px) {
+      .imageDivider {
+        width: 203px;
+        height: 49px;
+      }
+    }
+
+    @media all and (min-width: 1920px) {
+      .imageDivider {
+        width: 232px;
+        height: 68.8px;
+      }
     }
   }
 }
-/* This is mostly intended for prototyping; 
-please download the pattern and re-host for production environments. 
-Thank you! */
