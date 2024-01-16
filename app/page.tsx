@@ -3,7 +3,7 @@ import { Attire, Details, Faqs } from "./components";
 import styles from "./page.module.scss";
 
 export default function Home() {
-  const [number, setNumber] = React.useState<number>(0);
+  // const [number, setNumber] = React.useState<number>(0);
 
   return (
     <main className={styles.main}>
