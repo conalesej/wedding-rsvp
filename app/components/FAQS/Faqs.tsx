@@ -1,11 +1,14 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./Faqs.module.scss";
 import { TitleHeader } from "@/app/common";
 
 const LeafDivider = () => {
   return (
-    <img
+    <Image
       className={styles.imageDivider}
+      width={145}
+      height={35}
       src="/images/tree-divider.png"
       alt="My Image"
     />
@@ -146,7 +149,7 @@ const Faqs = () => {
             " Grateful for all we possess, Our hearts truly blessed,
             <br /> Your presence and prayers, our dearest quest. <br />
             If you wish to gift with kindness nonetheless, <br />
-            Monetary blessings, we humbly suggest. " 
+            Monetary blessings, we humbly suggest. "
           </p>
         </section>
 
