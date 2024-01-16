@@ -24,8 +24,10 @@
         --size: 83px;
         height: var(--size);
         width: var(--size);
+        filter: var(--drop-shadow-md);
         outline: 1px solid #b08127;
         border-radius: 50%;
+        
       }
 
       @media all and (min-width: 720px) {

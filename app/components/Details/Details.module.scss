@@ -1,0 +1,89 @@
+.main {
+  background-color: #f0ecec;
+  color: var(--main-text-color);
+  padding: var(--mains-padding);
+
+  box-shadow: var(--box-shadow-md);
+  transform: rotateX(1deg);
+
+  .wrapper {
+    max-width: 740px;
+    margin: 0px auto;
+
+    .eventDetails {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+
+      > *:nth-child(odd) {
+        flex-basis: 49.5%;
+      }
+
+      .eventMain {
+        text-align: center;
+        --label-font-size: 12px;
+
+        .eventLabel {
+          font-size: var(--label-font-size);
+        }
+
+        .eventPairs {
+          font-size: var(--p-font-size);
+          margin-top: 5px;
+        }
+      }
+
+      @media all and (min-width: 720px) {
+        .eventMain {
+          --label-font-size: 14.4px;
+        }
+      }
+      @media all and (min-width: 1280px) {
+        .eventMain {
+          --label-font-size: 16.8px;
+        }
+      }
+      @media all and (min-width: 1920px) {
+        .eventMain {
+          --label-font-size: 19.2px;
+        }
+      }
+    }
+
+    .accomodations {
+      display: flex;
+      justify-content: space-around;
+
+      align-items: flex-start;
+
+      .accomodationMain {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--p-font-size);
+
+        --name-font-size: var(--subheader-font-size);
+
+        .accomodationName {
+          font-weight: 500;
+          font-size: var(--name-font-size);
+        }
+
+        .accomodationLabel {
+          font-size: 8px;
+
+          @media all and (min-width: 720px) {
+            font-size: 9.6px;
+          }
+          @media all and (min-width: 1280px) {
+            font-size: 11.2px;
+          }
+          @media all and (min-width: 1920px) {
+            font-size: 12.8px;
+          }
+        }
+      }
+    }
+  }
+}

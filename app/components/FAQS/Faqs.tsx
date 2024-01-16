@@ -143,10 +143,10 @@ const Faqs = () => {
             I’m planning on considering a gift, any preferences?
           </header>
           <p className={[styles.answer, styles.italicized].join(" ")}>
-            Grateful for all we possess, Our hearts truly blessed,
+            " Grateful for all we possess, Our hearts truly blessed,
             <br /> Your presence and prayers, our dearest quest. <br />
             If you wish to gift with kindness nonetheless, <br />
-            Monetary blessings, we humbly suggest.
+            Monetary blessings, we humbly suggest. " 
           </p>
         </section>
 
