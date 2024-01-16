@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Attire, Details, Faqs } from "./components";
 import styles from "./page.module.scss";
