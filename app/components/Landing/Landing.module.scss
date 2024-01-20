@@ -1,14 +1,178 @@
 .main {
   padding: var(--mains-padding);
 
-  .nameSection {
+  box-shadow: var(--box-shadow-md);
+  transform: rotateX(1deg);
+  .wrapper {
+    max-width: 740px;
+    margin: 0px auto;
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+    .nameSection {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .names {
+        width: 65%;
+        border: 1px solid black;
 
-    .names{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+
+        gap: 10px;
+
+        --first-name-font-size: 28px;
+        --last-name-font-size: 16px;
+
+        .groom {
+          font-family: "Bodoni Moda", serif;
+
+          .groomFirstName {
+            font-size: var(--first-name-font-size);
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+          }
+          .groomLastName {
+            font-size: var(--last-name-font-size);
+            border: 1px solid green;
+            text-align: right;
+          }
+        }
+
+        --big-and-font-size: 65px;
+
+        .bigAnd {
+          height: 68px;
+          width: 54px;
+          align-self: flex-end;
+          font-family: "Bodoni Moda", serif;
+          font-size: var(--big-and-font-size);
+        }
+
+        .bride {
+          font-family: "Bodoni Moda", serif;
+
+          .brideFirstName {
+            font-size: var(--first-name-font-size);
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+          }
+          .brideLastName {
+            font-size: var(--last-name-font-size);
+            border: 1px solid green;
+            text-align: left;
+          }
+        }
+      }
+
+      --cursive-font-size-sm: 27px;
+      // --areGettingMarrie-margin-top: 10px;
+
+      .areGettingMarried {
+        // margin-top: var(--areGettingMarrie-margin-top);
+        border: 1px solid black;
+        font-family: "Great Vibes", cursive;
+        font-size: var(--cursive-font-size-sm);
+      }
+    }
+
+    --mini-details-font-size: 13px;
+    --miniDetails-margin-y: 24px;
+
+    .miniDetails {
+      margin-top: var(--miniDetails-margin-y);
+      margin-bottom: var(--miniDetails-margin-y);
+
+      border: 1px solid black;
+      width: 80%;
+      padding: 5px;
+
+      text-align: center;
+      font-size: var(--mini-details-font-size);
+    }
+
+    --inviteMessage-font-size: 12px;
+    --inviteMessage-line-height: 34px;
+    .inviteMessage {
+      font-size: var(--inviteMessage-font-size);
+      line-height: var(--inviteMessage-line-height);
+      text-align: center;
+    }
+
+    --countdownSection-gap: 20px;
+    .countdownSection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      gap: var(--countdownSection-gap);
+
+      --weAreWaitingFor-font-size: 27px;
+      .weAreWaitingFor {
+        font-size: var(--weAreWaitingFor-font-size);
+        font-family: "Great Vibes", cursive;
+      }
+
+      .countdowns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        --countdownNumber-font-size: 48px;
+        --countdownUnits-font-size: 20px;
+
+        .countdownNumber {
+          font-size: var(--countdownNumber-font-size);
+        }
+        .countdownUnit {
+          font-size: var(--countdownUnits-font-size);
+        }
+      }
+
+      --hopeMessage-font-size: 12px;
+
+      .hopeMessage {
+        font-size: var(--weAreWaitingFor-font-size);
+        font-family: "Great Vibes", cursive;
+      }
+    }
+
+    --footer-font-size: 16px;
+    .landingFooter {
+      font-size: var(--footer-font-size);
+      opacity: 65%;
     }
   }
+}
+
+.italicized {
+  font-style: italic;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.dividerMain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  .line {
+    width: 100%;
+    border-top: 1px solid black;
+  }
+}
+
+.golden {
+  color: #ccb017;
 }
