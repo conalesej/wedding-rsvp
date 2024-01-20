@@ -1,6 +1,5 @@
 .main {
   background-image: var(--background-image-stripes);
-
   padding: var(--mains-padding);
   color: var(--main-text-color);
 
@@ -27,7 +26,6 @@
         filter: var(--drop-shadow-md);
         outline: 1px solid #b08127;
         border-radius: 50%;
-        
       }
 
       @media all and (min-width: 720px) {

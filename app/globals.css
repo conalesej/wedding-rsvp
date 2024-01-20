@@ -7,7 +7,8 @@
 :root {
   --main-text-color: #43403f;
 
-  --background-image-stripes: url("https://www.transparenttextures.com/patterns/white-texture.png");
+  /* --background-image-stripes: url("https://www.transparenttextures.com/patterns/white-texture.png"); */
+  --background-image-stripes: url("https://www.transparenttextures.com/patterns/diagonal-waves.png");
 
   --divider-color: #808080;
   --divider-opacity: 25%;
@@ -23,6 +24,10 @@
   --title-font-size: 18px;
 
   --mains-padding: 20px 31px 20px;
+
+  --faqs-main-background-color: #fffcf4;
+  --details-main-background-color: #f0ecec;
+  --attire-main-background-color: #ffffff;
 }
 
 @media all and (min-width: 720px) {
