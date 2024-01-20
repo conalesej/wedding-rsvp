@@ -1,5 +1,5 @@
 import React from "react";
-import { Attire, Details, Faqs } from "./components";
+import { Attire, Details, Faqs, Landing } from "./components";
 import styles from "./page.module.scss";
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
       <div>{Math.round(number * 1.2 * 10)/10 + "px"}</div>
       <div>{Math.round(number * 1.4 * 10)/10 + "px"}</div>
       <div>{Math.round(number * 1.6 * 10)/10 + "px"}</div> */}
+      <Landing />
       <Details />
       <Attire />
       <Faqs />

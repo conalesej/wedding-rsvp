@@ -143,7 +143,7 @@ const Details = () => {
         </LabelSection>
         <section className={styles.accomodations}>
           <Accomodation
-            name="Go Hotels - North Edsa"
+            name="Go Hotels - N. Edsa"
             address="1107 Epifanio de los Santos Ave, Project 7, Quezon City, 1105 Metro Manila"
             cellphone="+ 63 917 620 1624"
           />

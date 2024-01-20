@@ -1,0 +1,14 @@
+.main {
+  padding: var(--mains-padding);
+
+  .nameSection {
+    display: flex;
+    flex-direction: column;
+
+    .names{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+}
