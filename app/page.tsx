@@ -10,14 +10,15 @@ export default function Home() {
       {/* <input
         type="number"
         onChange={(e) => setNumber(e.target.valueAsNumber)}
-      />
-      <div>{Math.round(number * 1.2 * 10)/10 + "px"}</div>
-      <div>{Math.round(number * 1.4 * 10)/10 + "px"}</div>
-      <div>{Math.round(number * 1.6 * 10)/10 + "px"}</div> */}
+      /> */}
+      {/* <div>{Math.round(number * 1.2 * 10) / 10 + "px"}</div>
+      <div>{Math.round(number * 1.4 * 10) / 10 + "px"}</div>
+      <div>{Math.round(number * 1.6 * 10) / 10 + "px"}</div> */}
       <Landing />
       <Details />
       <Attire />
       <Faqs />
+      <a href="tel:+1234567890">Open Messenger</a>
     </main>
   );
 }

@@ -1,0 +1,18 @@
+.infiniteIconMain {
+  --dimension-icon: 32px;
+
+  @media all and (min-width: 720px) {
+    --dimension-icon: 48px;
+  }
+
+  @media all and (min-width: 1280px) {
+    --dimension-icon: 57.6px;
+  }
+
+  @media all and (min-width: 1920px) {
+    --dimension-icon: 67.2px;
+  }
+  
+  height: var(--dimension-icon);
+  width: var(--dimension-icon);
+}

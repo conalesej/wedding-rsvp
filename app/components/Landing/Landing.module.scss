@@ -1,8 +1,110 @@
 .main {
+  position: relative;
   padding: var(--mains-padding);
 
   box-shadow: var(--box-shadow-md);
   transform: rotateX(1deg);
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  overflow: hidden;
+
+  background-color: #484848;
+
+  background-image: url("/public/images/Roses.jpg");
+  background-size: cover; /* You can adjust this property based on your preference */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  /* Other background properties can be added as needed */
+
+  --names-gap: 10px;
+  --first-name-font-size: 28px;
+  --last-name-font-size: 16px;
+  --big-and-font-size: 65px;
+  --cursive-font-size-sm: 27px;
+  --areGettingMarrie-margin-top: 0px;
+  --mini-details-font-size: 13px;
+  --miniDetails-margin-y: 24px;
+  --inviteMessage-font-size: 12px;
+  --inviteMessage-line-height: 34px;
+  --countdownSection-gap: 20px;
+  --weAreWaitingFor-font-size: 27px;
+  --countdownNumber-font-size: 48px;
+  --countdownUnits-font-size: 20px;
+  --hopeMessage-font-size: 12px;
+  --footer-font-size: 16px;
+
+  * {
+    color: white;
+    filter: var(--drop-shadow-md);
+  }
+
+  @media all and (min-width: 720px) {
+    .wrapper {
+      // ... times 1.2
+      --names-gap: 12px;
+      --first-name-font-size: 33.6px;
+      --last-name-font-size: 19.2px;
+      --big-and-font-size: 78px;
+      --cursive-font-size-sm: 32.4px;
+      --areGettingMarrie-margin-top: 16px;
+      --mini-details-font-size: 15.6px;
+      --miniDetails-margin-y: 28.8px;
+      --inviteMessage-font-size: 14.4px;
+      --inviteMessage-line-height: 40.8px;
+      --countdownSection-gap: 24px;
+      --weAreWaitingFor-font-size: 32.4px;
+      --countdownNumber-font-size: 57.6px;
+      --countdownUnits-font-size: 24px;
+      --hopeMessage-font-size: 14.4px;
+      --footer-font-size: 19.2px;
+    }
+  }
+
+  @media all and (min-width: 1280px) {
+    .wrapper {
+      // ... times 1.4
+      --names-gap: 16px;
+      --first-name-font-size: 39.2px;
+      --last-name-font-size: 22.4px;
+      --big-and-font-size: 91px;
+      --cursive-font-size-sm: 37.8px;
+      --areGettingMarrie-margin-top: 32px;
+      --mini-details-font-size: 18.2px;
+      --miniDetails-margin-y: 33.6px;
+      --inviteMessage-font-size: 16.8px;
+      --inviteMessage-line-height: 47.6px;
+      --countdownSection-gap: 28px;
+      --weAreWaitingFor-font-size: 37.8px;
+      --countdownNumber-font-size: 67.2px;
+      --countdownUnits-font-size: 28px;
+      --hopeMessage-font-size: 16.8px;
+      --footer-font-size: 22.4px;
+    }
+  }
+
+  @media all and (min-width: 1920px) {
+    .wrapper {
+      // ... times 1.6
+      --names-gap: 18px;
+      --first-name-font-size: 44.8px;
+      --last-name-font-size: 25.6px;
+      --big-and-font-size: 104px;
+      --cursive-font-size-sm: 43.2px;
+      --areGettingMarrie-margin-top: 48px;
+      --mini-details-font-size: 20.8px;
+      --miniDetails-margin-y: 38.4px;
+      --inviteMessage-font-size: 19.2px;
+      --inviteMessage-line-height: 54.4px;
+      --countdownSection-gap: 32px;
+      --weAreWaitingFor-font-size: 43.2px;
+      --countdownNumber-font-size: 76.8px;
+      --countdownUnits-font-size: 32px;
+      --hopeMessage-font-size: 19.2px;
+      --footer-font-size: 25.6px;
+    }
+  }
+
   .wrapper {
     max-width: 740px;
     margin: 0px auto;
@@ -11,6 +113,7 @@
     flex-direction: column;
     align-items: center;
     .nameSection {
+      width: 100%;
       margin-top: 24px;
       display: flex;
       flex-direction: column;
@@ -18,33 +121,28 @@
       align-items: center;
       .names {
         width: 65%;
-        border: 1px solid black;
 
         display: flex;
         justify-content: space-around;
         align-items: center;
 
-        gap: 10px;
-
-        --first-name-font-size: 28px;
-        --last-name-font-size: 16px;
+        gap: var(--names-gap);
 
         .groom {
           font-family: "Bodoni Moda", serif;
+          width: 100%;
 
           .groomFirstName {
             font-size: var(--first-name-font-size);
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            text-align: right;
           }
           .groomLastName {
             font-size: var(--last-name-font-size);
-            border: 1px solid green;
             text-align: right;
           }
         }
-
-        --big-and-font-size: 65px;
 
         .bigAnd {
           height: 68px;
@@ -56,39 +154,32 @@
 
         .bride {
           font-family: "Bodoni Moda", serif;
+          width: 100%;
 
           .brideFirstName {
             font-size: var(--first-name-font-size);
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
           }
           .brideLastName {
             font-size: var(--last-name-font-size);
-            border: 1px solid green;
             text-align: left;
           }
         }
       }
 
-      --cursive-font-size-sm: 27px;
-      // --areGettingMarrie-margin-top: 10px;
-
       .areGettingMarried {
-        // margin-top: var(--areGettingMarrie-margin-top);
-        border: 1px solid black;
+        margin-top: var(--areGettingMarrie-margin-top);
         font-family: "Great Vibes", cursive;
         font-size: var(--cursive-font-size-sm);
       }
     }
 
-    --mini-details-font-size: 13px;
-    --miniDetails-margin-y: 24px;
-
     .miniDetails {
       margin-top: var(--miniDetails-margin-y);
       margin-bottom: var(--miniDetails-margin-y);
 
-      border: 1px solid black;
+      border: 1px solid white;
       width: 80%;
       padding: 5px;
 
@@ -96,15 +187,12 @@
       font-size: var(--mini-details-font-size);
     }
 
-    --inviteMessage-font-size: 12px;
-    --inviteMessage-line-height: 34px;
     .inviteMessage {
       font-size: var(--inviteMessage-font-size);
       line-height: var(--inviteMessage-line-height);
       text-align: center;
     }
 
-    --countdownSection-gap: 20px;
     .countdownSection {
       width: 100%;
       display: flex;
@@ -114,7 +202,6 @@
 
       gap: var(--countdownSection-gap);
 
-      --weAreWaitingFor-font-size: 27px;
       .weAreWaitingFor {
         font-size: var(--weAreWaitingFor-font-size);
         font-family: "Great Vibes", cursive;
@@ -126,9 +213,9 @@
         justify-content: space-between;
         text-align: center;
 
-        --countdownNumber-font-size: 48px;
-        --countdownUnits-font-size: 20px;
-
+        .countdownNumber:last-child {
+          flex-basis: 12%;
+        }
         .countdownNumber {
           font-size: var(--countdownNumber-font-size);
         }
@@ -137,15 +224,12 @@
         }
       }
 
-      --hopeMessage-font-size: 12px;
-
       .hopeMessage {
         font-size: var(--weAreWaitingFor-font-size);
         font-family: "Great Vibes", cursive;
       }
     }
 
-    --footer-font-size: 16px;
     .landingFooter {
       font-size: var(--footer-font-size);
       opacity: 65%;
@@ -169,7 +253,7 @@
   gap: 1px;
   .line {
     width: 100%;
-    border-top: 1px solid black;
+    border-top: 1px solid white;
   }
 }
 

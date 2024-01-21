@@ -1,5 +1,4 @@
-"use client"
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import styles from "./Details.module.scss";
 
 import {
@@ -78,33 +77,8 @@ const Accomodation: React.FC<IAccomodation> = ({
 };
 
 const Details = () => {
-  const detailsRef = useRef<HTMLDivElement>(null);
-  const [detailPageWidth, setDetailPageWidth] = useState<number>(0);
-
-  useEffect(() => {
-    const updateWidth = () => {
-      if (detailsRef.current) {
-        const width = detailsRef.current.getBoundingClientRect().width;
-        setDetailPageWidth(width);
-      }
-    };
-
-    // Initial width update
-    updateWidth();
-
-    // Update width when the window is resized
-    window.addEventListener("resize", updateWidth);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", updateWidth);
-    };
-  }, []);
-
-  const dividerSize = detailPageWidth >= 1280 ? 278 : 211;
-
   return (
-    <main className={styles.main} ref={detailsRef}>
+    <main className={styles.main}>
       <div className={styles.wrapper}>
         <TitleHeader title="When & Where" />
         <LabelSection>
@@ -122,7 +96,7 @@ const Details = () => {
             labelPairs={eventDetails}
           />
 
-          <Divider orientation="vertical" height={dividerSize} />
+          <Divider orientation="vertical" />
 
           <Event
             iconInfo={{

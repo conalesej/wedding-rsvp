@@ -1,17 +1,12 @@
 import React from "react";
-
+import styles from "./Location.module.scss";
 interface ILocationIcon {
-  size?: number;
   color?: string;
 }
-const LocationIcon: React.FC<ILocationIcon> = ({
-  size = 12,
-  color = "#CCB017",
-}) => {
+const LocationIcon: React.FC<ILocationIcon> = ({ color = "#CCB017" }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      className={styles.locationIconMain}
       viewBox="0 0 12 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -6,6 +6,7 @@ import CloudIcon from "./Svgs/CloudIcon";
 import CellphoneIcon from "./Svgs/CellphoneIcon";
 import LocationIcon from "./Svgs/Location.icon";
 import InfiniteIcon from "./Svgs/InfiniteIcon";
+import ArrowDownIcon from "./Svgs/ScrollDownIcon";
 export {
   TitleHeader,
   LabelSection,
@@ -15,4 +16,5 @@ export {
   CellphoneIcon,
   CloudIcon,
   InfiniteIcon,
+  ArrowDownIcon,
 };

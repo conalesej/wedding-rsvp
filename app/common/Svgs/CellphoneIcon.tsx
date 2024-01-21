@@ -1,17 +1,12 @@
 import React from "react";
-
+import styles from "./CellPhoneIcon.module.scss";
 interface ICellphoneIcon {
-  size?: number;
   color?: string;
 }
-const CellphoneIcon: React.FC<ICellphoneIcon> = ({
-  size = 8,
-  color = "#CCB017",
-}) => {
+const CellphoneIcon: React.FC<ICellphoneIcon> = ({ color = "#CCB017" }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      className={styles.cellPhoneIconMain}
       viewBox="0 0 8 8"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

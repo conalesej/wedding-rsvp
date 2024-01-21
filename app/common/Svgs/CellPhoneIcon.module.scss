@@ -1,0 +1,18 @@
+.cellPhoneIconMain {
+  --dimension-icon: 8px;
+
+  @media all and (min-width: 720px) {
+    --dimension-icon: 12px;
+  }
+
+  @media all and (min-width: 1280px) {
+    --dimension-icon: 14.4px;
+  }
+
+  @media all and (min-width: 1920px) {
+    --dimension-icon: 16.8px;
+  }
+
+  height: var(--dimension-icon);
+  width: var(--dimension-icon);
+}

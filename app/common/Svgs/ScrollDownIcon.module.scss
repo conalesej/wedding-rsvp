@@ -1,0 +1,46 @@
+.scrollDownIconMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  --aboveArrow-height: 10px;
+
+  --aboveArrow-width: 16px;
+
+  --belowArrow-height: 13px;
+
+  --belowArrow-width: 20px;
+
+  @media all and (min-width: 720px) {
+    --aboveArrow-height: 15px;
+    --aboveArrow-width: 24px;
+    --belowArrow-height: 20px;
+    --belowArrow-width: 30px;
+  }
+
+  @media all and (min-width: 1280px) {
+    --aboveArrow-height: 18px;
+    --aboveArrow-width: 29px;
+    --belowArrow-height: 24px;
+    --belowArrow-width: 36px;
+  }
+
+  @media all and (min-width: 1920px) {
+    --aboveArrow-height: 21px;
+    --aboveArrow-width: 34px;
+    --belowArrow-height: 27px;
+    --belowArrow-width: 42px;
+  }
+
+  .aboveArrow {
+    height: var(--aboveArrow-height);
+    width: var(--aboveArrow-width);
+  }
+  .belowArrow {
+    margin-top: -4px;
+
+    height: var(--belowArrow-height);
+    width: var(--belowArrow-width);
+  }
+}

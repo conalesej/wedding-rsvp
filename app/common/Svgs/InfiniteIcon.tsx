@@ -1,17 +1,12 @@
 import React from "react";
-
+import styles from "./InfiniteIcon.module.scss";
 interface IInfiniteIcon {
-  size?: number;
   color?: string;
 }
-const InfiniteIcon: React.FC<IInfiniteIcon> = ({
-  size = 20,
-  color = "#CCB017",
-}) => {
+const InfiniteIcon: React.FC<IInfiniteIcon> = ({ color = "#CCB017" }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      className={styles.infiniteIconMain}
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

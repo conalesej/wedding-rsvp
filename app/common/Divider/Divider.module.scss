@@ -1,3 +1,21 @@
 .verticalDivider {
   opacity: var(--divider-opacity);
 }
+
+.borderBottom {
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.borderLeft {
+  border-left: 1px solid var(--divider-color);
+}
+
+.verticalResponsive{
+  height: 211px;
+
+  @media all and (min-width:1280px) {
+    height: 278px;
+
+  }
+}
+
