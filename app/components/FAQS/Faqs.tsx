@@ -65,23 +65,6 @@ const Faqs = () => {
 
         <section className={styles.faqSection}>
           <header className={styles.question}>
-            Are cameras or smartphones allowed during the wedding ceremony?
-          </header>
-          <p className={styles.answer}>
-            <span className={styles.cursive}>Absolutely! </span>
-            <span style={{ display: "inline" }}>
-              You're welcome to use phones and cameras to capture memories. We
-              kindly ask guests to remain at their designated places during the
-              ceremony, as professional photographers and cinematographers will
-              be documenting the special moments.
-            </span>
-          </p>
-        </section>
-
-        <LeafDivider />
-
-        <section className={styles.faqSection}>
-          <header className={styles.question}>
             What is the timeline of events on that day?
           </header>
           <p className={styles.answer}>To follow</p>

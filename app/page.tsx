@@ -1,5 +1,5 @@
 import React from "react";
-import { Attire, ContactUs, Details, Faqs, Landing } from "./components";
+import { Attire, ContactUs, Details, Faqs, Landing, Rsvp } from "./components";
 import styles from "./page.module.scss";
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
       <Details />
       <Attire />
       <Faqs />
+      <Rsvp />
       <ContactUs />
       <a href="tel:+1234567890">Open Messenger</a>
     </main>

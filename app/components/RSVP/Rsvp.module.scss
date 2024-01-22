@@ -1,0 +1,48 @@
+.rsvpMain {
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  color: var(--main-text-color);
+  background-color: var(--faqs-main-background-color);
+  padding: var(--mains-padding);
+  padding-bottom: 50px;
+
+  box-shadow: var(--box-shadow-md);
+  transform: rotateX(1deg);
+
+  .wrapper {
+    display: grid;
+    place-items: center;
+    max-width: 740px;
+    margin: 0px auto;
+
+    --label-font-size: 12px;
+
+
+    .label {
+      text-align: center;
+      margin-top: 12px;
+
+      margin-bottom: 12px;
+      font-size: var(--label-font-size);
+    }
+
+    .link {
+      color: var(--main-text-color);
+      font-size: var(--p-font-size);
+    }
+  }
+  @media all and (min-width: 720px) {
+    .wrapper {
+      --label-font-size: 14.4px;
+    }
+  }
+  @media all and (min-width: 1280px) {
+    .wrapper {
+      --label-font-size: 16.8px;
+    }
+  }
+  @media all and (min-width: 1920px) {
+    .wrapper {
+      --label-font-size: 19.2px;
+    }
+  }
+}
