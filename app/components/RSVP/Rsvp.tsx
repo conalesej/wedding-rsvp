@@ -12,7 +12,12 @@ const Rsvp = () => {
           arrangements for your attendance. We look forward to celebrating with
           you.
         </p>
-        <a className={styles.link} href="https://forms.gle/19eZCV8CbLmzLSwj8">
+
+        <a
+          className={styles.link}
+          href="https://forms.gle/19eZCV8CbLmzLSwj8"
+          target="_blank"
+        >
           Click this link to fill up the forms!
         </a>
       </div>
