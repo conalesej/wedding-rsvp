@@ -22,7 +22,7 @@ const Landing = () => {
   return (
     <Countdown
       date={target}
-      renderer={({ days, hours, minutes, seconds }) => (
+      renderer={({ days, hours, minutes }) => (
         <main className={styles.main}>
           <Image
             className={styles.imageBackground}
@@ -87,21 +87,14 @@ const Landing = () => {
                 </div>
 
                 <div className={styles.countdown}>
-                  <div className={styles.countdownNumber}>
-                    {minutes.toString().length === 1 ? "0" + minutes : minutes}
-                  </div>
-                  <div className={styles.countdownUnit}>Mins</div>
-                </div>
-
-                <div className={styles.countdown}>
                   <div
                     className={[styles.countdownNumber, styles.golden].join(
                       " "
                     )}
                   >
-                    {seconds.toString().length === 1 ? "0" + seconds : seconds}
+                    {minutes.toString().length === 1 ? "0" + minutes : minutes}
                   </div>
-                  <div className={styles.countdownUnit}>Sec</div>
+                  <div className={styles.countdownUnit}>Mins</div>
                 </div>
               </div>
 
