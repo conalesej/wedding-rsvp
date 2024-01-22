@@ -1,4 +1,6 @@
 .main {
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+
   position: relative;
   padding: var(--mains-padding);
 
@@ -11,11 +13,6 @@
   overflow: hidden;
 
   background-color: #484848;
-
-  background-image: url("/public/images/Roses.jpg");
-  background-size: cover; /* You can adjust this property based on your preference */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  /* Other background properties can be added as needed */
 
   --names-gap: 10px;
   --first-name-font-size: 28px;
