@@ -1,7 +1,9 @@
 .titleHeaderMain {
   display: grid;
   place-items: center;
-  
+
+  width: 100%;
+
   .titleHeader {
     font-size: var(--header-font-size);
     text-align: center;

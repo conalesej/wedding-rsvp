@@ -4,9 +4,9 @@ import { TitleHeader } from "@/app/common";
 const Rsvp = () => {
   return (
     <main className={styles.rsvpMain}>
-      <TitleHeader title="RSVP" lineWidthPercentage="100%" />
-
       <div className={styles.wrapper}>
+        <TitleHeader title="RSVP" lineWidthPercentage="100%" />
+
         <p className={styles.label}>
           Please respond by <b>March 03, 2024</b>, so we can make the necessary
           arrangements for your attendance. We look forward to celebrating with

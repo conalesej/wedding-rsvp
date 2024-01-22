@@ -37,7 +37,7 @@ const ContactUs = () => {
         objectFit="cover"
       />
       <div className={styles.wrapper}>
-        <TitleHeader title="Contact Us" lineWidthPercentage="40%" />
+        <TitleHeader title="Contact Us" lineWidthPercentage="100%" />
         <article className={styles.paragraph}>
           💌 Let's Chat
           <br />
