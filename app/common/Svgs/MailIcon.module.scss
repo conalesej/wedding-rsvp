@@ -1,0 +1,18 @@
+.mailIconMain {
+  filter: var(--drop-shadow-md);
+  --dimension-icon: 23px;
+
+  @media all and (min-width: 720px) {
+    --dimension-icon: 34.5px; /* 23px * 1.5 */
+  }
+
+  @media all and (min-width: 1280px) {
+    --dimension-icon: 41.4px; /* 23px * 1.8 */
+  }
+
+  @media all and (min-width: 1920px) {
+    --dimension-icon: 48.3px; /* 23px * 2.1 */
+  }
+  height: var(--dimension-icon);
+  width: var(--dimension-icon);
+}

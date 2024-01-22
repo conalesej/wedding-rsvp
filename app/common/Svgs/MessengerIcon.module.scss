@@ -1,0 +1,19 @@
+.messengerIconMain {
+  filter: var(--drop-shadow-md);
+  --dimension-icon: 19px;
+
+  @media all and (min-width: 720px) {
+    --dimension-icon: 28.5px; /* 19px * 1.5 */
+  }
+
+  @media all and (min-width: 1280px) {
+    --dimension-icon: 34.2px; /* 19px * 1.8 */
+  }
+
+  @media all and (min-width: 1920px) {
+    --dimension-icon: 39.9px; /* 19px * 2.1 */
+  }
+
+  height: var(--dimension-icon);
+  width: var(--dimension-icon);
+}

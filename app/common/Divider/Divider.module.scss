@@ -10,12 +10,10 @@
   border-left: 1px solid var(--divider-color);
 }
 
-.verticalResponsive{
+.verticalResponsive {
   height: 211px;
 
-  @media all and (min-width:1280px) {
+  @media all and (min-width: 1280px) {
     height: 278px;
-
   }
 }
-

@@ -1,0 +1,92 @@
+.contactUsMain {
+  position: relative;
+  padding: var(--mains-padding);
+
+  background: pink;
+  color: var(--main-text-color);
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    padding: var(--mains-padding);
+
+    margin: 0px auto;
+    max-width: 740px;
+
+    background-color: white;
+    border-radius: 5px;
+
+    box-shadow: var(--box-shadow-md);
+
+    --content-font-size: 12px;
+    --line-height: 24px;
+    --divider-height: 80px;
+
+    .paragraph {
+      margin-top: 16px;
+      font-size: var(--content-font-size);
+      font-style: italic;
+      line-height: var(--line-height);
+    }
+
+    .contacts {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .contact {
+        padding-top: 10px;
+        .name {
+          text-align: center;
+          font-size: var(--content-font-size);
+          font-weight: 700;
+        }
+
+        .icons > * {
+          height: unset;
+          flex-basis: unset;
+        }
+
+        .icons {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          padding: 0px 12px;
+        }
+      }
+    }
+
+    .contacts :nth-child(odd) {
+      /* Your styles for even child elements */
+      flex-basis: 49.5%;
+    }
+    .contacts :nth-child(even) {
+      height: var(--divider-height);
+      flex-basis: 1px;
+      /* Your styles for even child elements */
+    }
+  }
+
+  @media all and (min-width: 720px) {
+    .wrapper {
+      --content-font-size: 14.4px;
+      --line-height: 28.8px; /* 24px * 1.2 */
+      --divider-height: 96px; /* 80px * 1.2 */
+    }
+  }
+  @media all and (min-width: 1280px) {
+    .wrapper {
+      --content-font-size: 16.8px;
+      --line-height: 33.6px; /* 24px * 1.4 */
+      --divider-height: 112px; /* 80px * 1.4 */
+    }
+  }
+  @media all and (min-width: 1920px) {
+    .wrapper {
+      --content-font-size: 19.2px;
+      --line-height: 38.4px; /* 24px * 1.6 */
+      --divider-height: 128px; /* 80px * 1.6 */
+    }
+  }
+}

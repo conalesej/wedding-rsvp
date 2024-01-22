@@ -16,3 +16,23 @@
   height: var(--dimension-icon);
   width: var(--dimension-icon);
 }
+
+.cellPhoneIconContact {
+  filter: var(--drop-shadow-md);
+  --dimension-icon: 16px;
+
+  @media all and (min-width: 720px) {
+    --dimension-icon: 24px; /* 16px * 1.5 */
+  }
+
+  @media all and (min-width: 1280px) {
+    --dimension-icon: 28.8px; /* 16px * 1.8 */
+  }
+
+  @media all and (min-width: 1920px) {
+    --dimension-icon: 33.6px; /* 16px * 2.1 */
+  }
+
+  height: var(--dimension-icon);
+  width: var(--dimension-icon);
+}

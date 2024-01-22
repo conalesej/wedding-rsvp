@@ -19,7 +19,7 @@ const ArrowDownIcon: React.FC<IArrowDownIcon> = ({
         <path
           d="M2.2625 0.737488L8 6.46249L13.7375 0.737488L15.5 2.49999L8 9.99999L0.5 2.49999L2.2625 0.737488Z"
           fill={color}
-          fill-opacity="0.5"
+          fillOpacity="0.5"
         />
       </svg>
       <svg

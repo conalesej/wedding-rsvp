@@ -7,6 +7,8 @@ import CellphoneIcon from "./Svgs/CellphoneIcon";
 import LocationIcon from "./Svgs/Location.icon";
 import InfiniteIcon from "./Svgs/InfiniteIcon";
 import ArrowDownIcon from "./Svgs/ScrollDownIcon";
+import MailIcon from "./Svgs/MailIcon";
+import MessengerIcon from "./Svgs/MessengerIcon";
 export {
   TitleHeader,
   LabelSection,
@@ -17,4 +19,6 @@ export {
   CloudIcon,
   InfiniteIcon,
   ArrowDownIcon,
+  MailIcon,
+  MessengerIcon,
 };
