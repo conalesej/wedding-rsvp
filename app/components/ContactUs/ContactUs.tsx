@@ -53,7 +53,7 @@ const ContactUs = () => {
             <div className={styles.icons}>
               <MessengerIcon
                 href={`${
-                  window.innerWidth > 768
+                  windowWidth > 768
                     ? "https://www.facebook.com/messages/t/conalesej"
                     : "messenger://conalesej"
                 }`}
@@ -68,7 +68,7 @@ const ContactUs = () => {
             <div className={styles.icons}>
               <MessengerIcon
                 href={`${
-                  window.innerWidth > 768
+                  windowWidth > 768
                     ? "https://www.facebook.com/messages/t/aine095"
                     : "messenger://aine095"
                 }`}
