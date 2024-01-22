@@ -6,6 +6,9 @@
   background-color: var(--faqs-main-background-color);
   padding: var(--mains-padding);
 
+  box-shadow: var(--box-shadow-md);
+  transform: rotateX(1deg);
+  
   --cursive-font-size-sm: 16px;
 
   .wrapper {
