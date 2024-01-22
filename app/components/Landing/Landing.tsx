@@ -87,11 +87,7 @@ const Landing = () => {
                 </div>
 
                 <div className={styles.countdown}>
-                  <div
-                    className={[styles.countdownNumber, styles.golden].join(
-                      " "
-                    )}
-                  >
+                  <div className={styles.countdownNumber}>
                     {minutes.toString().length === 1 ? "0" + minutes : minutes}
                   </div>
                   <div className={styles.countdownUnit}>Mins</div>
