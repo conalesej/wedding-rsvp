@@ -1,6 +1,7 @@
 import React from "react";
 import { Attire, ContactUs, Details, Faqs, Landing, Rsvp } from "./components";
 import styles from "./page.module.scss";
+import { RoseSvg } from "./common";
 
 export default function Home() {
   // const [number, setNumber] = React.useState<number>(0);
