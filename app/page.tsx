@@ -20,7 +20,6 @@ export default function Home() {
       <Faqs />
       <Rsvp />
       <ContactUs />
-      <a href="tel:+1234567890">Open Messenger</a>
     </main>
   );
 }

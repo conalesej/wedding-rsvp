@@ -29,13 +29,13 @@ const ContactUs = () => {
   }, []);
   return (
     <main className={styles.contactUsMain}>
-      {/* <Image
+      <Image
         className={styles.imageBackground}
         src="/images/Roses.jpg"
         alt="My Image"
         layout="fill"
         objectFit="cover"
-      /> */}
+      />
       <div className={styles.wrapper}>
         <TitleHeader title="Contact Us" lineWidthPercentage="100%" />
         <article className={styles.paragraph}>
