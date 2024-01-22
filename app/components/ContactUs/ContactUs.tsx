@@ -55,7 +55,7 @@ const ContactUs = () => {
                 href={`${
                   windowWidth > 768
                     ? "https://www.facebook.com/messages/t/conalesej"
-                    : "messenger://conalesej"
+                    : "https://www.messenger.com/t/conalesej"
                 }`}
               />
               <MailIcon href="sms:+63949699082" />
@@ -70,7 +70,7 @@ const ContactUs = () => {
                 href={`${
                   windowWidth > 768
                     ? "https://www.facebook.com/messages/t/aine095"
-                    : "messenger://aine095"
+                    : "https://www.messenger.com/t/aine095"
                 }`}
               />
               <MailIcon href="sms:+639301997543" />
