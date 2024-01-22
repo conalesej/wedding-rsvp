@@ -213,14 +213,16 @@
         justify-content: space-between;
         text-align: center;
 
-        .countdownNumber:last-child {
+        .countdown:last-child {
           flex-basis: 12%;
         }
-        .countdownNumber {
-          font-size: var(--countdownNumber-font-size);
-        }
-        .countdownUnit {
-          font-size: var(--countdownUnits-font-size);
+        .countdown {
+          .countdownNumber {
+            font-size: var(--countdownNumber-font-size);
+          }
+          .countdownUnit {
+            font-size: var(--countdownUnits-font-size);
+          }
         }
       }
 
