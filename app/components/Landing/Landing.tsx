@@ -68,7 +68,7 @@ const Landing = () => {
               so that we can be prepared.
             </p>
             <Divider />
-            <section className={styles.countdownSection}>
+            {/* <section className={styles.countdownSection}>
               <div className={styles.weAreWaitingFor}>We are waiting for..</div>
 
               <div className={styles.countdowns}>
@@ -95,11 +95,22 @@ const Landing = () => {
                     {minutes.toString().length === 1 ? "0" + minutes : minutes}
                   </div>
                   <div className={styles.countdownUnit}>Mins</div>
-                </div>
-              </div>
+                </div> */}
+
+                {/* <div className={styles.countdown}>
+                  <div
+                    className={[styles.countdownNumber, styles.golden].join(
+                      " "
+                    )}
+                  >
+                    {seconds.toString().length === 1 ? "0" + seconds : seconds}
+                  </div>
+                  <div className={styles.countdownUnit}>Sec</div>
+                </div> */}
+              {/* </div>
 
               <div className={styles.hopeMessage}>Hope to see you there!</div>
-            </section>
+            </section> */}
             <Divider />
             <footer className={styles.landingFooter}>
               Scroll down for more details..
