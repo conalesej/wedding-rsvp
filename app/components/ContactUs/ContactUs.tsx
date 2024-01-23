@@ -30,6 +30,7 @@ const ContactUs = () => {
   return (
     <main className={styles.contactUsMain}>
       <Image
+        quality={10}
         className={styles.imageBackground}
         src="/images/Roses.jpg"
         alt="My Image"
@@ -58,7 +59,7 @@ const ContactUs = () => {
                     : "https://www.messenger.com/t/conalesej"
                 }`}
               />
-              <MailIcon href="sms:+63949699082" />
+              <MailIcon href="sms:+639496990828" />
               <CellphoneIcon contactUs href="tel:+639496990828" />
             </div>
           </div>

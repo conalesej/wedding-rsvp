@@ -1,6 +1,7 @@
 .main {
   // background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 
+  margin-top: -33px;
   position: relative;
   padding: var(--mains-padding);
 
@@ -142,9 +143,10 @@
         }
 
         .bigAnd {
-          height: 68px;
-          width: 54px;
-          align-self: flex-end;
+          color: #ccb017;
+          // height: 68px;
+          // width: 54px;
+          align-self: center;
           font-family: "Bodoni Moda", serif;
           font-size: var(--big-and-font-size);
         }
@@ -166,7 +168,7 @@
       }
 
       .areGettingMarried {
-        margin-top: var(--areGettingMarrie-margin-top);
+        margin-top: -15px;
         font-family: "Great Vibes", cursive;
         font-size: var(--cursive-font-size-sm);
       }

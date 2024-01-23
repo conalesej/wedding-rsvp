@@ -9,6 +9,7 @@ import InfiniteIcon from "./Svgs/InfiniteIcon";
 import ArrowDownIcon from "./Svgs/ScrollDownIcon";
 import MailIcon from "./Svgs/MailIcon";
 import MessengerIcon from "./Svgs/MessengerIcon";
+import NavBar from "./NavBar/NavBar";
 export {
   TitleHeader,
   LabelSection,
@@ -21,4 +22,5 @@ export {
   ArrowDownIcon,
   MailIcon,
   MessengerIcon,
+  NavBar,
 };

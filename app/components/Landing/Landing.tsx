@@ -25,6 +25,8 @@ const Landing = () => {
       renderer={({ days, hours, minutes, seconds }) => (
         <main className={styles.main}>
           <Image
+            quality={10}
+            priority
             className={styles.imageBackground}
             src="/images/Roses.jpg"
             alt="My Image"
