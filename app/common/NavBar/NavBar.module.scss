@@ -9,7 +9,6 @@
   padding: 3px 12px;
 
   //   border: 1px solid white;
-  background-color: rgba(217, 217, 217, 0.1);
 
   border-radius: 50px;
 
@@ -35,14 +34,32 @@
     --nav-font-size: 19.2px;
     padding: 3px 19.2px;
   }
+}
 
-  .whiteBase {
-    color: white;
-    opacity: 50%;
-  }
+.darkBase {
+  color: white;
+  opacity: 50%;
+}
 
-  .whiteSelected {
-    opacity: 1;
-    border-bottom: 1px solid white;
-  }
+.lightBase {
+  color: #43403f;
+  opacity: 50%;
+}
+
+.darkSelected {
+  opacity: 100%;
+  border-bottom: 1px solid white;
+}
+
+.lightSelected {
+  opacity: 100%;
+  border-bottom: 1px solid #43403f;
+}
+
+.navBarDark {
+  background-color: rgba(217, 217, 217, 0.15);
+}
+
+.navBarLight {
+  background-color: rgba(217, 217, 217, 0.15);
 }

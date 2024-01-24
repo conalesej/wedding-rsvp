@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import styles from "./Details.module.scss";
 
 import {
@@ -10,6 +11,7 @@ import {
   LocationIcon,
   TitleHeader,
 } from "@/app/common";
+import { useActiveSectionContext } from "@/app/context/sectionContext";
 
 interface IEvent {
   iconInfo: {
@@ -77,8 +79,15 @@ const Accomodation: React.FC<IAccomodation> = ({
 };
 
 const Details = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { activeSection, setActiveSection } = useActiveSectionContext();
+  useEffect(() => {
+    if (ref.current && activeSection === "Details") {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [activeSection]);
   return (
-    <main className={styles.main}>
+    <main className={styles.main} ref={ref}>
       <div className={styles.wrapper}>
         <TitleHeader title="When & Where" />
         <LabelSection>

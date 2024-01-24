@@ -1,18 +1,46 @@
-.mailIconMain {
-  filter: var(--drop-shadow-md);
-  --dimension-icon: 23px;
+.iconContainer {
+  position: relative;
+
+  --href--size: 24px;
 
   @media all and (min-width: 720px) {
-    --dimension-icon: 34.5px; /* 23px * 1.5 */
+    --href--size: 36px;
   }
 
   @media all and (min-width: 1280px) {
-    --dimension-icon: 41.4px; /* 23px * 1.8 */
+    --href--size: 48px;
   }
 
   @media all and (min-width: 1920px) {
-    --dimension-icon: 48.3px; /* 23px * 2.1 */
+    --href--size: 60px;
   }
-  height: var(--dimension-icon);
-  width: var(--dimension-icon);
+
+  .hrefContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: var(--href--size);
+    width: var(--href--size);
+    z-index: 99;
+  }
+
+  .mailIconMain {
+    filter: var(--drop-shadow-md);
+    --dimension-icon: 23px;
+
+    @media all and (min-width: 720px) {
+      --dimension-icon: 34.5px; /* 23px * 1.5 */
+    }
+
+    @media all and (min-width: 1280px) {
+      --dimension-icon: 41.4px; /* 23px * 1.8 */
+    }
+
+    @media all and (min-width: 1920px) {
+      --dimension-icon: 48.3px; /* 23px * 2.1 */
+    }
+    height: var(--dimension-icon);
+    width: var(--dimension-icon);
+  }
 }

@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./Faqs.module.scss";
 import { TitleHeader } from "@/app/common";
+import { useActiveSectionContext } from "@/app/context/sectionContext";
 
 const LeafDivider = () => {
   return (
@@ -16,8 +18,15 @@ const LeafDivider = () => {
 };
 
 const Faqs = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { activeSection, setActiveSection } = useActiveSectionContext();
+  useEffect(() => {
+    if (ref.current && activeSection === "FAQs") {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [activeSection]);
   return (
-    <main className={styles.main}>
+    <main className={styles.main} ref={ref}>
       <div className={styles.wrapper}>
         <TitleHeader title="Frequently Asked Questions" />
 
@@ -86,10 +95,26 @@ const Faqs = () => {
         <section className={styles.faqSection}>
           <header className={styles.question}>How do I RSVP?</header>
           <p className={styles.answer}>
-            You can RSVP by filling out the provided <b>forms</b> or contacting
-            us directly. Choose the method that suits you best, and we look
-            forward to receiving your response! Insert mo dito pre yung link sa
-            google forms or HyperLink sa Contact Us Forms
+            You can RSVP by filling out the provided{" "}
+            <a href="https://forms.gle/19eZCV8CbLmzLSwj8" target="_blank">
+              forms
+            </a>{" "}
+            or contacting us directly. Choose the method that suits you best,
+            and we look forward to receiving your response!
+            <br />
+            <b
+              className={styles.underlined}
+              onClick={() => setActiveSection("Contacts")}
+            >
+              Contact Us
+            </b>{" "}
+            or{" "}
+            <b
+              className={styles.underlined}
+              onClick={() => setActiveSection("RSVP")}
+            >
+              RSVP
+            </b>
           </p>
         </section>
 
@@ -102,7 +127,7 @@ const Faqs = () => {
           <p className={styles.answer}>
             The RSVP deadline is set for <b>6 weeks</b> before the wedding date
             or by
-            <b>March 3, 2024</b>. We appreciate your prompt response!
+            <b> March 3, 2024</b>. We appreciate your prompt response!
           </p>
         </section>
 
@@ -145,8 +170,14 @@ const Faqs = () => {
           <p className={styles.answer}>
             If you have additional questions or need further assistance, please
             reach out to us directly. You can find our contact information in
-            the <b className={styles.underlined}>"Contact Us"</b> section of
-            this website.
+            the{" "}
+            <b
+              className={styles.underlined}
+              onClick={() => setActiveSection("Contacts")}
+            >
+              Contact Us
+            </b>{" "}
+            section of this website.
           </p>
         </section>
       </div>

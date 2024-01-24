@@ -1,9 +1,18 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import styles from "./Attire.module.scss";
 import { Divider, LabelSection, TitleHeader } from "@/app/common";
+import { useActiveSectionContext } from "@/app/context/sectionContext";
 const Attire = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { activeSection, setActiveSection } = useActiveSectionContext();
+  useEffect(() => {
+    if (ref.current && activeSection === "Attire") {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [activeSection]);
   return (
-    <main className={styles.main}>
+    <main className={styles.main} ref={ref}>
       <div className={styles.wrapper}>
         <TitleHeader title="Attire" />
 

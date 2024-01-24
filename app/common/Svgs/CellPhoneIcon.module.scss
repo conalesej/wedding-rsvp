@@ -1,38 +1,64 @@
-.cellPhoneIconMain {
-  --dimension-icon: 8px;
+.iconContainer {
+  position: relative;
+  --href--size: 24px;
 
   @media all and (min-width: 720px) {
-    --dimension-icon: 12px;
+    --href--size: 36px;
   }
 
   @media all and (min-width: 1280px) {
-    --dimension-icon: 14.4px;
+    --href--size: 48px;
+  }
+
+  .hrefContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: var(--href--size);
+    width: var(--href--size);
+    z-index: 99;
   }
 
   @media all and (min-width: 1920px) {
-    --dimension-icon: 16.8px;
+    --href--size: 60px;
+  }
+  .cellPhoneIconMain {
+    --dimension-icon: 8px;
+
+    @media all and (min-width: 720px) {
+      --dimension-icon: 12px;
+    }
+
+    @media all and (min-width: 1280px) {
+      --dimension-icon: 14.4px;
+    }
+
+    @media all and (min-width: 1920px) {
+      --dimension-icon: 16.8px;
+    }
+
+    height: var(--dimension-icon);
+    width: var(--dimension-icon);
   }
 
-  height: var(--dimension-icon);
-  width: var(--dimension-icon);
-}
+  .cellPhoneIconContact {
+    filter: var(--drop-shadow-md);
+    --dimension-icon: 16px;
 
-.cellPhoneIconContact {
-  filter: var(--drop-shadow-md);
-  --dimension-icon: 16px;
+    @media all and (min-width: 720px) {
+      --dimension-icon: 24px; /* 16px * 1.5 */
+    }
 
-  @media all and (min-width: 720px) {
-    --dimension-icon: 24px; /* 16px * 1.5 */
+    @media all and (min-width: 1280px) {
+      --dimension-icon: 28.8px; /* 16px * 1.8 */
+    }
+
+    @media all and (min-width: 1920px) {
+      --dimension-icon: 33.6px; /* 16px * 2.1 */
+    }
+
+    height: var(--dimension-icon);
+    width: var(--dimension-icon);
   }
-
-  @media all and (min-width: 1280px) {
-    --dimension-icon: 28.8px; /* 16px * 1.8 */
-  }
-
-  @media all and (min-width: 1920px) {
-    --dimension-icon: 33.6px; /* 16px * 2.1 */
-  }
-
-  height: var(--dimension-icon);
-  width: var(--dimension-icon);
 }

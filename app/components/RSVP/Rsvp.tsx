@@ -1,9 +1,18 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import styles from "./Rsvp.module.scss";
 import { TitleHeader } from "@/app/common";
+import { useActiveSectionContext } from "@/app/context/sectionContext";
 const Rsvp = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { activeSection, setActiveSection } = useActiveSectionContext();
+  useEffect(() => {
+    if (ref.current && activeSection === "RSVP") {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [activeSection]);
   return (
-    <main className={styles.rsvpMain}>
+    <main className={styles.rsvpMain} ref={ref}>
       <div className={styles.wrapper}>
         <TitleHeader title="RSVP" lineWidthPercentage="100%" />
 

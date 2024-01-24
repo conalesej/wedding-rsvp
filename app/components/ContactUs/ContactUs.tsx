@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./ContactUs.module.scss";
 import {
@@ -9,7 +9,11 @@ import {
   CellphoneIcon,
   MessengerIcon,
 } from "@/app/common";
+import { useActiveSectionContext } from "@/app/context/sectionContext";
 const ContactUs = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { activeSection, setActiveSection } = useActiveSectionContext();
+
   const [windowWidth, setWindowWidth] = useState(() => {
     // Use a callback to provide an initial value and check for SSR
     return typeof window !== "undefined" ? window.innerWidth : 0;
@@ -27,8 +31,14 @@ const ContactUs = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (ref.current && activeSection === "Contacts") {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [activeSection]);
   return (
-    <main className={styles.contactUsMain}>
+    <main className={styles.contactUsMain} ref={ref}>
       <Image
         quality={10}
         className={styles.imageBackground}
