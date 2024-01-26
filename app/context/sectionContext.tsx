@@ -6,11 +6,22 @@ type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
 };
 
-export type SectionName = "Home" | "Details" | "Attire" | "FAQs" | "RSVP" | "Contacts";
+export type SectionName =
+  | "Landing"
+  | "Details"
+  | "Attire"
+  | "FAQs"
+  | "RSVP"
+  | "Contacts";
+
+interface IActiveSection {
+  willScroll: boolean;
+  section: SectionName;
+}
 
 type ActiveSectionContextType = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  activeSection: IActiveSection;
+  setActiveSection: React.Dispatch<React.SetStateAction<IActiveSection>>;
 };
 
 export const ActiveSectionContext =
@@ -19,7 +30,10 @@ export const ActiveSectionContext =
 export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  const [activeSection, setActiveSection] = useState<IActiveSection>({
+    willScroll: false,
+    section: "Landing",
+  });
 
   return (
     <ActiveSectionContext.Provider

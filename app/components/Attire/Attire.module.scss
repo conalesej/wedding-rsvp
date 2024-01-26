@@ -5,7 +5,7 @@
 
   box-shadow: var(--box-shadow-md);
   transform: rotateX(1deg);
-  
+
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
@@ -21,12 +21,20 @@
       align-items: center;
 
       .themeImage {
+        position: relative;
+        z-index: 999;
         --size: 83px;
         height: var(--size);
         width: var(--size);
         filter: var(--drop-shadow-md);
         outline: 1px solid #b08127;
         border-radius: 50%;
+
+        overflow: hidden;
+
+        .image {
+          z-index: 0;
+        }
       }
 
       @media all and (min-width: 720px) {
@@ -88,6 +96,9 @@
 
       .side {
         text-align: center;
+        .attireName{
+          margin: 12px 0px;
+        }
       }
 
       header {

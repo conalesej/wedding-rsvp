@@ -8,7 +8,7 @@
 
   box-shadow: var(--box-shadow-md);
   transform: rotateX(1deg);
-  
+
   --cursive-font-size-sm: 16px;
 
   .wrapper {
@@ -33,6 +33,10 @@
           display: inline;
           font-family: "Great Vibes", cursive;
           font-size: var(--cursive-font-size-sm);
+        }
+
+        b {
+          cursor: pointer;
         }
 
         @media all and (min-width: 720px) {

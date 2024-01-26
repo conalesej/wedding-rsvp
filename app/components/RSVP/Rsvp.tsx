@@ -3,14 +3,29 @@ import React, { useEffect, useRef } from "react";
 import styles from "./Rsvp.module.scss";
 import { TitleHeader } from "@/app/common";
 import { useActiveSectionContext } from "@/app/context/sectionContext";
+import { useInView } from "framer-motion";
 const Rsvp = () => {
   const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, {
+    root: undefined,
+    margin: "-40%",
+  });
   const { activeSection, setActiveSection } = useActiveSectionContext();
+
   useEffect(() => {
-    if (ref.current && activeSection === "RSVP") {
+    if (
+      ref.current &&
+      activeSection.section === "RSVP" &&
+      activeSection.willScroll
+    ) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [activeSection]);
+  useEffect(() => {
+    if (isInView) {
+      setActiveSection({ willScroll: false, section: "RSVP" });
+    }
+  }, [isInView]);
   return (
     <main className={styles.rsvpMain} ref={ref}>
       <div className={styles.wrapper}>

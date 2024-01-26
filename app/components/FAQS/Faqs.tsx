@@ -1,10 +1,11 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./Faqs.module.scss";
 import { TitleHeader } from "@/app/common";
 import { useActiveSectionContext } from "@/app/context/sectionContext";
 
+import { useInView } from "framer-motion";
 const LeafDivider = () => {
   return (
     <Image
@@ -19,12 +20,27 @@ const LeafDivider = () => {
 
 const Faqs = () => {
   const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, {
+    root: undefined,
+    margin: "-40%",
+  });
+
   const { activeSection, setActiveSection } = useActiveSectionContext();
   useEffect(() => {
-    if (ref.current && activeSection === "FAQs") {
+    if (
+      ref.current &&
+      activeSection.section === "FAQs" &&
+      activeSection.willScroll
+    ) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [activeSection]);
+
+  useEffect(() => {
+    if (isInView) {
+      setActiveSection({ willScroll: false, section: "FAQs" });
+    }
+  }, [isInView]);
   return (
     <main className={styles.main} ref={ref}>
       <div className={styles.wrapper}>
@@ -104,14 +120,18 @@ const Faqs = () => {
             <br />
             <b
               className={styles.underlined}
-              onClick={() => setActiveSection("Contacts")}
+              onClick={() =>
+                setActiveSection({ willScroll: true, section: "Contacts" })
+              }
             >
               Contact Us
             </b>{" "}
             or{" "}
             <b
               className={styles.underlined}
-              onClick={() => setActiveSection("RSVP")}
+              onClick={() =>
+                setActiveSection({ willScroll: true, section: "RSVP" })
+              }
             >
               RSVP
             </b>
@@ -173,7 +193,9 @@ const Faqs = () => {
             the{" "}
             <b
               className={styles.underlined}
-              onClick={() => setActiveSection("Contacts")}
+              onClick={() =>
+                setActiveSection({ willScroll: true, section: "Contacts" })
+              }
             >
               Contact Us
             </b>{" "}

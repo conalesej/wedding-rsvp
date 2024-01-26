@@ -232,8 +232,10 @@
     }
 
     .landingFooter {
-      font-size: var(--footer-font-size);
-      opacity: 65%;
+      .footerText {
+        font-size: var(--footer-font-size);
+        opacity: 65%;
+      }
     }
   }
 }

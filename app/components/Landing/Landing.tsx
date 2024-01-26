@@ -6,6 +6,7 @@ import styles from "./Landing.module.scss";
 
 import { ArrowDownIcon, InfiniteIcon } from "@/app/common";
 import { useActiveSectionContext } from "@/app/context/sectionContext";
+import { useInView } from "framer-motion";
 
 const Divider = () => {
   return (
@@ -20,6 +21,11 @@ const Divider = () => {
 const Landing = () => {
   const id = useId();
   const ref = useRef<HTMLElement>(null);
+
+  const isInView = useInView(ref, {
+    root: undefined,
+    margin: "-40%",
+  });
 
   const { activeSection, setActiveSection } = useActiveSectionContext();
 
@@ -56,10 +62,20 @@ const Landing = () => {
   }, []);
 
   useEffect(() => {
-    if (ref.current && activeSection === "Home") {
+    if (
+      ref.current &&
+      activeSection.section === "Landing" &&
+      activeSection.willScroll
+    ) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [activeSection]);
+
+  useEffect(() => {
+    if (isInView) {
+      setActiveSection({ willScroll: false, section: "Landing" });
+    }
+  }, [isInView]);
   return (
     <main className={styles.main} ref={ref}>
       <Image
@@ -71,6 +87,7 @@ const Landing = () => {
         layout="fill"
         objectFit="cover"
         style={{ opacity: "20%" }}
+        sizes="(max-width: 720px) 100vw, (max-width: 1280px) 50vw, 25vw, 1920px"
       />
       <div className={styles.wrapper}>
         <section className={styles.nameSection}>
@@ -145,10 +162,15 @@ const Landing = () => {
           <div className={styles.hopeMessage}>Hope to see you there!</div>
         </section>
         <Divider />
-        <footer className={styles.landingFooter}>
-          Scroll down for more details..
+        <footer
+          className={styles.landingFooter}
+          onClick={() =>
+            setActiveSection({ willScroll: true, section: "Details" })
+          }
+        >
+          <p className={styles.footerText}>Scroll down for more details..</p>
+          <ArrowDownIcon />
         </footer>
-        <ArrowDownIcon />
       </div>
     </main>
   );

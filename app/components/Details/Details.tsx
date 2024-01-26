@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useId, useRef } from "react";
 import styles from "./Details.module.scss";
 
 import {
@@ -11,7 +11,9 @@ import {
   LocationIcon,
   TitleHeader,
 } from "@/app/common";
+
 import { useActiveSectionContext } from "@/app/context/sectionContext";
+import { useInView } from "framer-motion";
 
 interface IEvent {
   iconInfo: {
@@ -80,12 +82,26 @@ const Accomodation: React.FC<IAccomodation> = ({
 
 const Details = () => {
   const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, {
+    root: undefined,
+    margin: "-40%",
+  });
+
   const { activeSection, setActiveSection } = useActiveSectionContext();
   useEffect(() => {
-    if (ref.current && activeSection === "Details") {
+    if (
+      ref.current &&
+      activeSection.section === "Details" &&
+      activeSection.willScroll
+    ) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [activeSection]);
+  useEffect(() => {
+    if (isInView) {
+      setActiveSection({ willScroll: false, section: "Details" });
+    }
+  }, [isInView]);
   return (
     <main className={styles.main} ref={ref}>
       <div className={styles.wrapper}>
@@ -117,9 +133,16 @@ const Details = () => {
             labelPairs={weatherDetails}
           />
         </section>
-        ---------------------------------Google
-        maps---------------------------------
-        <TitleHeader title="Accomodations" />
+        <TitleHeader title="Map & Location" />
+        <section className={styles.mapContainer}>
+          <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=221%20Tandang%20Sora%20Ave,%20Tandang%20Sora,%20Quezon%20City,%201116%20Metro%20Manila+(Our%20Wedding%20Venue)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <a href="https://www.maps.ie/population/">
+              Population Estimator map
+            </a>
+          </iframe>
+        </section>
+
+        {/* <TitleHeader title="Accomodations" />
         <LabelSection>
           If you're coming from far, you might want to consider booking in a
           place to stay! Here are some of them!
@@ -135,7 +158,7 @@ const Details = () => {
             address="799 Epifanio de los Santos Ave, South Triangle, Quezon City, 1103 Metro Manila"
             cellphone="+ 63 919 056 7788"
           />
-        </section>
+        </section> */}
       </div>
     </main>
   );

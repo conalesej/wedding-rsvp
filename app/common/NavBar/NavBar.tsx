@@ -8,7 +8,7 @@ import {
 
 const NavBar: React.FC = () => {
   const NavOptions: SectionName[] = [
-    "Home",
+    "Landing",
     "Details",
     "Attire",
     "FAQs",
@@ -18,36 +18,38 @@ const NavBar: React.FC = () => {
 
   const { activeSection, setActiveSection } = useActiveSectionContext();
 
-  const isOnLanding = activeSection === "Home";
+  const isOnLanding = activeSection.section === "Landing";
 
   return (
     <section
       className={[
         styles.navBar,
-        activeSection === "Home" ? styles.navBarDark : styles.navBarLight,
+        isOnLanding ? styles.navBarDark : styles.navBarLight,
       ].join(" ")}
     >
       {NavOptions.map((option, index) => {
         let className = [styles.nav];
-        if (activeSection === option) {
+        if (activeSection.section === option) {
           className.push(
-            option === "Home" ? styles.darkSelected : styles.lightSelected
+            option === "Landing" ? styles.darkSelected : styles.lightSelected
           );
         }
         if (isOnLanding) {
           className.push(styles.darkBase);
-        }else{
+        } else {
           className.push(styles.lightBase);
-
         }
 
         return (
           <div
             key={option + index}
             className={className.join(" ")}
-            onClick={() => setActiveSection(option)}
+            onClick={() => {
+              if (activeSection.section !== option)
+                setActiveSection({ willScroll: true, section: option });
+            }}
           >
-            {option}
+            {option === "Landing" ? "Home" : option}
           </div>
         );
       })}

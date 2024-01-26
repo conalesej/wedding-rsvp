@@ -10,9 +10,14 @@ import {
   MessengerIcon,
 } from "@/app/common";
 import { useActiveSectionContext } from "@/app/context/sectionContext";
+import { useInView } from "framer-motion";
 const ContactUs = () => {
   const ref = useRef<HTMLElement>(null);
   const { activeSection, setActiveSection } = useActiveSectionContext();
+  const isInView = useInView(ref, {
+    root: undefined,
+    margin: "-40%",
+  });
 
   const [windowWidth, setWindowWidth] = useState(() => {
     // Use a callback to provide an initial value and check for SSR
@@ -33,10 +38,20 @@ const ContactUs = () => {
   }, []);
 
   useEffect(() => {
-    if (ref.current && activeSection === "Contacts") {
+    if (
+      ref.current &&
+      activeSection.section === "Contacts" &&
+      activeSection.willScroll
+    ) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [activeSection]);
+
+  useEffect(() => {
+    if (isInView) {
+      setActiveSection({ willScroll: false, section: "Contacts" });
+    }
+  }, [isInView]);
   return (
     <main className={styles.contactUsMain} ref={ref}>
       <Image
@@ -46,6 +61,7 @@ const ContactUs = () => {
         alt="My Image"
         layout="fill"
         objectFit="cover"
+        sizes="(max-width: 720px) 100vw, (max-width: 1280px) 50vw, 25vw, 1920px"
       />
       <div className={styles.wrapper}>
         <TitleHeader title="Contact Us" lineWidthPercentage="100%" />

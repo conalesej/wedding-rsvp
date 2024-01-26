@@ -2,6 +2,7 @@
   background-color: var(--details-main-background-color);
   color: var(--main-text-color);
   padding: var(--mains-padding);
+  padding-bottom: 0px;
 
   box-shadow: var(--box-shadow-md);
   transform: rotateX(1deg);
@@ -15,6 +16,7 @@
       justify-content: space-between;
       gap: 10px;
       align-items: flex-start;
+      margin-bottom: 12px;
 
       > *:nth-child(odd) {
         flex-basis: 49.5%;
@@ -51,40 +53,62 @@
       }
     }
 
-    .accomodations {
-      display: flex;
-      justify-content: space-around;
+    .mapContainer {
+      position: relative;
+      margin-top: 12px;
+      height: 80dvh;
+      width: 100%;
 
-      align-items: flex-start;
+      padding: 5px;
 
-      .accomodationMain {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: var(--p-font-size);
+      iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px dashed var(--details-main-background-color);
+        box-shadow: var(--box-shadow-md);
 
-        --name-font-size: var(--subheader-font-size);
-
-        .accomodationName {
-          font-weight: 500;
-          font-size: var(--name-font-size);
-        }
-
-        .accomodationLabel {
-          font-size: 8px;
-          @media all and (min-width: 720px) {
-            font-size: 10.4px;
-          }
-
-          @media all and (min-width: 1280px) {
-            font-size: 12.8px;
-          }
-
-          @media all and (min-width: 1920px) {
-            font-size: 15.2px;
-          }
-        }
+        color: var(--details-main-background-color);
+        height: 100%;
+        width: 110%;
       }
     }
+
+    // .accomodations {
+    //   display: flex;
+    //   justify-content: space-around;
+
+    //   align-items: flex-start;
+
+    //   .accomodationMain {
+    //     display: flex;
+    //     flex-direction: column;
+    //     text-align: center;
+    //     gap: var(--p-font-size);
+
+    //     --name-font-size: var(--subheader-font-size);
+
+    //     .accomodationName {
+    //       font-weight: 500;
+    //       font-size: var(--name-font-size);
+    //     }
+
+    //     .accomodationLabel {
+    //       font-size: 8px;
+    //       @media all and (min-width: 720px) {
+    //         font-size: 10.4px;
+    //       }
+
+    //       @media all and (min-width: 1280px) {
+    //         font-size: 12.8px;
+    //       }
+
+    //       @media all and (min-width: 1920px) {
+    //         font-size: 15.2px;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
