@@ -6,6 +6,17 @@ import { TitleHeader } from "@/app/common";
 import { useActiveSectionContext } from "@/app/context/sectionContext";
 
 import { useInView } from "framer-motion";
+
+import { Typography } from "@mui/material";
+import {
+  Timeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineOppositeContent,
+  TimelineSeparator,
+} from "@mui/lab";
 const LeafDivider = () => {
   return (
     <Image
@@ -15,6 +26,143 @@ const LeafDivider = () => {
       src="/images/tree-divider.png"
       alt="My Image"
     />
+  );
+};
+
+const TimeLineComponent = () => {
+  return (
+    <Timeline className={styles.timelineWrapper}>
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>3:30PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            Guests converge at the Reception, greeted with cocktails and the
+            joyous anticipation of an evening filled with photobooth delights,
+            delectable soups, salads, and pasta.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>4:45PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            Guests converge at the Reception, greeted with cocktails and the
+            joyous anticipation of an evening filled with photobooth delights,
+            delectable soups, salads, and pasta.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>6:00PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            A warm welcome by the host initiates the festivities, introducing
+            guests from various corners of the world and kicking off an exciting
+            Raffle Part 1.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>6:35PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            Indulge in a delightful Dinner & Pictorial session, capturing
+            cherished moments in a backdrop of celebration.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>7:05PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            Experience the journey of love through a Growing UP AVP and Prenup
+            AVP, followed by the suspense of Raffle Part 2.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>7:40PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            Immerse in an On-Site Video, offering glimpses into the heartwarming
+            moments of the day.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>7:55PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            Excitement peaks with Raffle Part 3, as the host expresses gratitude
+            to suppliers, including the talented team from Weddings by Z Events,
+            and the grand awarding of prizes.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent sx={{ flex: "unset" }}>
+          <Typography>8:00PM</Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot sx={{ backgroundColor: "#CCB017" }} />
+          {/* No TimelineConnector since it's the last item */}
+        </TimelineSeparator>
+        <TimelineContent>
+          <Typography>
+            Capture the unity of all guests on stage in a Group Picture, marking
+            the conclusion of a joyous celebration.
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
   );
 };
 
@@ -92,7 +240,15 @@ const Faqs = () => {
           <header className={styles.question}>
             What is the timeline of events on that day?
           </header>
-          <p className={styles.answer}>To follow</p>
+          <p className={styles.answer}>
+            While the details are not yet finalized, here is a preliminary
+            timeline of events for your consideration. Please note that
+            adjustments may be made as the planning progresses.
+          </p>
+
+          <div className={styles.timeline}>
+            <TimeLineComponent />
+          </div>
         </section>
 
         <LeafDivider />

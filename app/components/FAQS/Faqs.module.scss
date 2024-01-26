@@ -58,6 +58,11 @@
           text-decoration: underline;
         }
       }
+      .timeline {
+        p {
+          font-size: var(--p-font-size);
+        }
+      }
       .italicized {
         font-style: italic;
       }
@@ -96,4 +101,10 @@
       }
     }
   }
+}
+
+.timelineWrapper {
+  margin-top: 12px;
+  margin-bottom: -40px;
+
 }
