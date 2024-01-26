@@ -33,19 +33,21 @@ const Rsvp = () => {
         <TitleHeader title="RSVP" lineWidthPercentage="100%" />
 
         <UseInViewAnimate>
-          <p className={styles.label}>
-            Please respond by <b>March 03, 2024</b>, so we can make the
-            necessary arrangements for your attendance. We look forward to
-            celebrating with you.
-          </p>
+          <div className={styles.labelContainer}>
+            <p className={styles.label}>
+              Please respond by <b>March 03, 2024</b>, so we can make the
+              necessary arrangements for your attendance. We look forward to
+              celebrating with you.
+            </p>
 
-          <a
-            className={styles.link}
-            href="https://forms.gle/19eZCV8CbLmzLSwj8"
-            target="_blank"
-          >
-            Click this link to fill up the forms!
-          </a>
+            <a
+              className={styles.link}
+              href="https://forms.gle/19eZCV8CbLmzLSwj8"
+              target="_blank"
+            >
+              Click this link to fill up the forms!
+            </a>
+          </div>
         </UseInViewAnimate>
       </div>
     </main>

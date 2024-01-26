@@ -16,18 +16,21 @@
 
     --label-font-size: 12px;
 
+    .labelContainer {
+      display: grid;
+      place-items: center;
+      .label {
+        text-align: center;
+        margin-top: 12px;
 
-    .label {
-      text-align: center;
-      margin-top: 12px;
+        margin-bottom: 12px;
+        font-size: var(--label-font-size);
+      }
 
-      margin-bottom: 12px;
-      font-size: var(--label-font-size);
-    }
-
-    .link {
-      color: var(--main-text-color);
-      font-size: var(--p-font-size);
+      .link {
+        color: var(--main-text-color);
+        font-size: var(--p-font-size);
+      }
     }
   }
   @media all and (min-width: 720px) {
