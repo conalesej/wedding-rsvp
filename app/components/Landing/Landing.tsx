@@ -1,11 +1,11 @@
 "use client";
 import React, { useCallback, useEffect, useId, useRef, useState } from "react"; // { useEffect, useMemo, useState }
-import Countdown from "react-countdown";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./Landing.module.scss";
 
 import { ArrowDownIcon, InfiniteIcon } from "@/app/common";
-import { useActiveSectionContext } from "@/app/context/sectionContext";
+import { useActiveSectionContext } from "@/app/hooks/sectionContext";
 import { useInView } from "framer-motion";
 
 const Divider = () => {
@@ -76,6 +76,7 @@ const Landing = () => {
       setActiveSection({ willScroll: false, section: "Landing" });
     }
   }, [isInView]);
+
   return (
     <main className={styles.main} ref={ref}>
       <Image
@@ -92,22 +93,56 @@ const Landing = () => {
       <div className={styles.wrapper}>
         <section className={styles.nameSection}>
           <div className={styles.names}>
-            <div className={styles.groom}>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className={styles.groom}
+            >
               <div className={styles.groomFirstName}>Ephraim</div>
               <div className={styles.groomLastName}>CONALES</div>
-            </div>
-            <div className={styles.bigAnd}>&</div>
-            <div className={styles.bride}>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className={styles.bigAnd}
+            >
+              &
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className={styles.bride}
+            >
               <div className={styles.brideFirstName}>Elaine</div>
               <div className={styles.brideLastName}>LUCEÑADA</div>
-            </div>
+            </motion.div>
           </div>
-          <div className={styles.areGettingMarried}>are getting married</div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className={styles.areGettingMarried}
+          >
+            are getting married
+          </motion.div>
         </section>
-        <section className={styles.miniDetails}>
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className={styles.miniDetails}
+        >
           April 13, 2024 | Quezon City, Manila
-        </section>
-        <p className={styles.inviteMessage}>
+        </motion.section>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className={styles.inviteMessage}
+        >
           Please join us on{" "}
           <span className={styles.italicized}>April 13, 2024</span> for the
           marriage of Ephraim Conales and Elaine Luceñada. The ceremony will
@@ -121,9 +156,21 @@ const Landing = () => {
             <b>March 03, 2024</b>
           </span>{" "}
           so that we can be prepared.
-        </p>
-        <Divider />
-        <section className={styles.countdownSection}>
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className={styles.divider}
+        >
+          <Divider />
+        </motion.div>
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className={styles.countdownSection}
+        >
           <div className={styles.weAreWaitingFor}>We are waiting for..</div>
 
           <div className={styles.countdowns}>
@@ -160,9 +207,19 @@ const Landing = () => {
           </div>
 
           <div className={styles.hopeMessage}>Hope to see you there!</div>
-        </section>
-        <Divider />
-        <footer
+        </motion.section>
+        <motion.div
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className={styles.divider}
+        >
+          <Divider />
+        </motion.div>
+        <motion.footer
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
           className={styles.landingFooter}
           onClick={() =>
             setActiveSection({ willScroll: true, section: "Details" })
@@ -170,7 +227,7 @@ const Landing = () => {
         >
           <p className={styles.footerText}>Scroll down for more details..</p>
           <ArrowDownIcon />
-        </footer>
+        </motion.footer>
       </div>
     </main>
   );

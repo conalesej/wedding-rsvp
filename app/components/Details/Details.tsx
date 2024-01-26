@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useId, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Details.module.scss";
 
 import {
@@ -12,8 +12,9 @@ import {
   TitleHeader,
 } from "@/app/common";
 
-import { useActiveSectionContext } from "@/app/context/sectionContext";
-import { useInView } from "framer-motion";
+import { useActiveSectionContext } from "@/app/hooks/sectionContext";
+import { useInView, motion } from "framer-motion";
+import UseInViewAnimate from "@/app/hooks/useInViewHook";
 
 interface IEvent {
   iconInfo: {
@@ -80,7 +81,10 @@ const weatherDetails = [
 //   );
 // };
 
-const Details = () => {
+interface IDetails {
+  MapComponent: HTMLElement;
+}
+const Details: React.FC<IDetails> = ({ MapComponent }) => {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, {
     root: undefined,
@@ -106,45 +110,46 @@ const Details = () => {
     }
   }, [isInView]);
 
-  useEffect(() => {}, []);
   return (
     <main className={styles.main} ref={ref}>
       <div className={styles.wrapper}>
         <TitleHeader title="When & Where" />
-        <LabelSection>
-          The ceremony and reception will be held on the same location. While it
-          is indoor, don't forget to bring your umbrellas!
-        </LabelSection>
-        <section className={styles.eventDetails}>
-          <Event
-            iconInfo={{
-              icon: "CalendarToday",
-              color: "#CCB017",
-              label: "Event Details",
-              size: 52,
-            }}
-            labelPairs={eventDetails}
-          />
 
-          <Divider orientation="vertical" />
+        <UseInViewAnimate>
+          <LabelSection>
+            The ceremony and reception will be held on the same location. While
+            it is indoor, don't forget to bring your umbrellas!
+          </LabelSection>
 
-          <Event
-            iconInfo={{
-              icon: "CloudQueue",
-              color: "#CCB017",
-              label: "Predicted Weather",
-              size: 52,
-            }}
-            labelPairs={weatherDetails}
-          />
-        </section>
+          <section className={styles.eventDetails}>
+            <Event
+              iconInfo={{
+                icon: "CalendarToday",
+                color: "#CCB017",
+                label: "Event Details",
+                size: 52,
+              }}
+              labelPairs={eventDetails}
+            />
+
+            <Divider orientation="vertical" />
+
+            <Event
+              iconInfo={{
+                icon: "CloudQueue",
+                color: "#CCB017",
+                label: "Predicted Weather",
+                size: 52,
+              }}
+              labelPairs={weatherDetails}
+            />
+          </section>
+        </UseInViewAnimate>
+
         <TitleHeader title="Map & Location" />
+
         <section className={styles.mapContainer}>
-          <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=221%20Tandang%20Sora%20Ave,%20Tandang%20Sora,%20Quezon%20City,%201116%20Metro%20Manila+(Our%20Wedding%20Venue)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-            <a href="https://www.maps.ie/population/">
-              Population Estimator map
-            </a>
-          </iframe>
+          <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=221%20Tandang%20Sora%20Ave,%20Tandang%20Sora,%20Quezon%20City,%201116%20Metro%20Manila+(Our%20Wedding%20Venue)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" />
         </section>
 
         {/* <TitleHeader title="Accomodations" />
@@ -163,6 +168,7 @@ const Details = () => {
             address="799 Epifanio de los Santos Ave, South Triangle, Quezon City, 1103 Metro Manila"
             cellphone="+ 63 919 056 7788"
           />
+        </UseInViewAnimate>
         </section> */}
       </div>
     </main>

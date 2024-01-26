@@ -8,8 +8,6 @@
 
   padding: 3px 12px;
 
-  //   border: 1px solid white;
-
   border-radius: 50px;
 
   display: flex;
@@ -21,6 +19,10 @@
 
   .nav {
     font-size: var(--nav-font-size);
+
+    cursor: pointer;
+
+    user-select: none;
   }
 
   @media all and (min-width: 720px) {

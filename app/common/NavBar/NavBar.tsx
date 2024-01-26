@@ -4,7 +4,9 @@ import styles from "./NavBar.module.scss";
 import {
   SectionName,
   useActiveSectionContext,
-} from "@/app/context/sectionContext";
+} from "@/app/hooks/sectionContext";
+import UseInViewAnimate from "@/app/hooks/useInViewHook";
+import { motion } from "framer-motion";
 
 const NavBar: React.FC = () => {
   const NavOptions: SectionName[] = [
@@ -21,7 +23,10 @@ const NavBar: React.FC = () => {
   const isOnLanding = activeSection.section === "Landing";
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
       className={[
         styles.navBar,
         isOnLanding ? styles.navBarDark : styles.navBarLight,
@@ -53,7 +58,7 @@ const NavBar: React.FC = () => {
           </div>
         );
       })}
-    </section>
+    </motion.section>
   );
 };
 

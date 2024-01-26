@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import ActiveSectionContextProvider from "./context/sectionContext";
+import ActiveSectionContextProvider from "./hooks/sectionContext";
 
 const inter = Poppins({
   subsets: ["latin"],

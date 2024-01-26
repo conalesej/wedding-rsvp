@@ -2,8 +2,9 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./Rsvp.module.scss";
 import { TitleHeader } from "@/app/common";
-import { useActiveSectionContext } from "@/app/context/sectionContext";
+import { useActiveSectionContext } from "@/app/hooks/sectionContext";
 import { useInView } from "framer-motion";
+import UseInViewAnimate from "@/app/hooks/useInViewHook";
 const Rsvp = () => {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, {
@@ -31,19 +32,21 @@ const Rsvp = () => {
       <div className={styles.wrapper}>
         <TitleHeader title="RSVP" lineWidthPercentage="100%" />
 
-        <p className={styles.label}>
-          Please respond by <b>March 03, 2024</b>, so we can make the necessary
-          arrangements for your attendance. We look forward to celebrating with
-          you.
-        </p>
+        <UseInViewAnimate>
+          <p className={styles.label}>
+            Please respond by <b>March 03, 2024</b>, so we can make the
+            necessary arrangements for your attendance. We look forward to
+            celebrating with you.
+          </p>
 
-        <a
-          className={styles.link}
-          href="https://forms.gle/19eZCV8CbLmzLSwj8"
-          target="_blank"
-        >
-          Click this link to fill up the forms!
-        </a>
+          <a
+            className={styles.link}
+            href="https://forms.gle/19eZCV8CbLmzLSwj8"
+            target="_blank"
+          >
+            Click this link to fill up the forms!
+          </a>
+        </UseInViewAnimate>
       </div>
     </main>
   );
