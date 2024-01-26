@@ -43,9 +43,8 @@ const TimeLineComponent = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Typography>
-            Guests converge at the Reception, greeted with cocktails and the
-            joyous anticipation of an evening filled with photobooth delights,
-            delectable soups, salads, and pasta.
+            Witness the solemnity of Wedding Rites as two hearts unite in
+            matrimony.
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -60,7 +59,7 @@ const TimeLineComponent = () => {
         <TimelineContent>
           <Typography>
             Guests converge at the Reception, greeted with cocktails and the
-            joyous anticipation of an evening filled with photobooth delights,
+            joyous anticipation of an evening filled with photobooth,
             delectable soups, salads, and pasta.
           </Typography>
         </TimelineContent>
