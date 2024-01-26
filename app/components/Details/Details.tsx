@@ -1,14 +1,14 @@
 "use client";
-import React, { useEffect, useId, useRef } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
 import styles from "./Details.module.scss";
 
 import {
   CalendarIcon,
-  CellphoneIcon,
+  // CellphoneIcon,
   CloudIcon,
   Divider,
   LabelSection,
-  LocationIcon,
+  // LocationIcon,
   TitleHeader,
 } from "@/app/common";
 
@@ -57,28 +57,28 @@ const weatherDetails = [
   { key: "Wind", value: "3km/h" },
 ];
 
-interface IAccomodation {
-  name: string;
-  address: string;
-  cellphone: string;
-}
-const Accomodation: React.FC<IAccomodation> = ({
-  name,
-  address,
-  cellphone,
-}) => {
-  return (
-    <div className={styles.accomodationMain}>
-      <span className={styles.accomodationName}>{name}</span>
-      <span className={styles.accomodationLabel}>
-        <LocationIcon /> {address}
-      </span>
-      <span className={styles.accomodationLabel}>
-        <CellphoneIcon /> {cellphone}
-      </span>
-    </div>
-  );
-};
+// interface IAccomodation {
+//   name: string;
+//   address: string;
+//   cellphone: string;
+// }
+// const Accomodation: React.FC<IAccomodation> = ({
+//   name,
+//   address,
+//   cellphone,
+// }) => {
+//   return (
+//     <div className={styles.accomodationMain}>
+//       <span className={styles.accomodationName}>{name}</span>
+//       <span className={styles.accomodationLabel}>
+//         <LocationIcon /> {address}
+//       </span>
+//       <span className={styles.accomodationLabel}>
+//         <CellphoneIcon /> {cellphone}
+//       </span>
+//     </div>
+//   );
+// };
 
 const Details = () => {
   const ref = useRef<HTMLElement>(null);
@@ -88,6 +88,9 @@ const Details = () => {
   });
 
   const { activeSection, setActiveSection } = useActiveSectionContext();
+
+  const [weather, setWeather] = useState<any | null>(null);
+
   useEffect(() => {
     if (
       ref.current &&
@@ -102,6 +105,8 @@ const Details = () => {
       setActiveSection({ willScroll: false, section: "Details" });
     }
   }, [isInView]);
+
+  useEffect(() => {}, []);
   return (
     <main className={styles.main} ref={ref}>
       <div className={styles.wrapper}>
