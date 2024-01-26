@@ -229,8 +229,9 @@ const Faqs = () => {
               <span style={{ display: "inline" }}>
                 You're welcome to use phones and cameras to capture memories. We
                 kindly ask guests to remain at their designated places during
-                the ceremony, as professional photographers and cinematographers
-                will be documenting the special moments.
+                the ceremony. This to esnsure that our professional
+                photographers and cinematographers can <b>effectively</b>{" "}
+                document all the special momets.
               </span>
             </p>
           </section>
