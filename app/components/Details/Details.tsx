@@ -81,10 +81,7 @@ const weatherDetails = [
 //   );
 // };
 
-interface IDetails {
-  MapComponent: HTMLElement;
-}
-const Details: React.FC<IDetails> = ({ MapComponent }) => {
+const Details = ({}) => {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, {
     root: undefined,
