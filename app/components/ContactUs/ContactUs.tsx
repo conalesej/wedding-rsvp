@@ -38,7 +38,7 @@ const ContactUs = () => {
   return (
     <main className={styles.contactUsMain} ref={ref}>
       <Image
-        quality={10}
+        quality={60}
         className={styles.imageBackground}
         src="/images/Roses.jpg"
         alt="My Image"

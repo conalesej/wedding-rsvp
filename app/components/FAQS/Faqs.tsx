@@ -343,7 +343,7 @@ const Faqs = () => {
 
           <section className={styles.faqSection}>
             <header className={styles.question}>
-              II have a question not answered here; how do I contact you?
+              I have a question not answered here; how do I contact you?
             </header>
             <p className={styles.answer}>
               If you have additional questions or need further assistance,
