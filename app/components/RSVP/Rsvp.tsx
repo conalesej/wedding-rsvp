@@ -45,7 +45,7 @@ const Rsvp = () => {
               href="https://forms.gle/19eZCV8CbLmzLSwj8"
               target="_blank"
             >
-              Click this link to fill up the forms!
+              Click this link to fill up the forms
             </a>
           </div>
         </UseInViewAnimate>
