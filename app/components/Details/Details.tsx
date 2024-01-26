@@ -81,7 +81,7 @@ const weatherDetails = [
 //   );
 // };
 
-const Details = ({}) => {
+const Details = () => {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, {
     root: undefined,
