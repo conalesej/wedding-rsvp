@@ -37,7 +37,7 @@ const Attire = () => {
           <LabelSection>
             <span>Strictly Formal Attire</span>
             <br />
-            Preferably in a lighter shade of <b>Champagne</b> or <b>Beige</b>
+            Preferably in a lighter shade of <b>Beige</b> or <b>Champagne</b>
           </LabelSection>
           <section className={styles.themeContainer}>
             <div className={styles.themeImage}>

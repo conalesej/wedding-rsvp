@@ -201,7 +201,7 @@ const Faqs = () => {
             <p className={styles.answer}>
               The wedding ceremony will start at <b>3:30PM</b>. We recommend
               arriving <b>30 minutes</b> before the scheduled ceremony start
-              time. This allows for ample time to find parking get seated, and
+              time. This allows for ample time to find parking, get seated, and
               be debriefed.
             </p>
           </section>
@@ -230,7 +230,7 @@ const Faqs = () => {
                 kindly ask guests to remain at their designated places during
                 the ceremony. This to esnsure that our professional
                 photographers and cinematographers can <b>effectively</b>{" "}
-                document all the special momets.
+                document all the special moments.
               </span>
             </p>
           </section>
