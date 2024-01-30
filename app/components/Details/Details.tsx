@@ -146,7 +146,10 @@ const Details = () => {
         <TitleHeader title="Map & Location" />
 
         <section className={styles.mapContainer}>
-          <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=221%20Tandang%20Sora%20Ave,%20Tandang%20Sora,%20Quezon%20City,%201116%20Metro%20Manila+(Our%20Wedding%20Venue)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" />
+          <iframe
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?width=674&amp;height=510&amp;hl=en&amp;q=221%20Tandang%20Sora%20Ave,%20Tandang%20Sora,%20Quezon%20City,%201116%20Metro%20Manila%20Quezon%20City+(Santuario%20de%20San%20Vicente%20de%20Paul)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          />
         </section>
 
         {/* <TitleHeader title="Accomodations" />
