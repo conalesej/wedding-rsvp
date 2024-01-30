@@ -124,7 +124,7 @@ const TimeLineComponent = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Typography>
-            Immerse in an On-Site Video, offering glimpses into the heartwarming
+            Immerse in an On-Site Video (SDE Video), offering glimpses into the heartwarming
             moments of the day.
           </Typography>
         </TimelineContent>
@@ -255,7 +255,7 @@ const Faqs = () => {
           <LeafDivider />
 
           <section className={styles.faqSection}>
-            <header className={styles.question}>Can I Bring a plus one?</header>
+            <header className={styles.question}>Can I bring a plus one?</header>
             <p className={styles.answer}>
               While we'd love to accommodate everyone, please <b>refrain</b>{" "}
               from inviting additional guests <b>without prior arrangement</b>{" "}
