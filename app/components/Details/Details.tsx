@@ -114,8 +114,7 @@ const Details = () => {
 
         <UseInViewAnimate>
           <LabelSection>
-            The ceremony and reception will be held on the same location. While
-            it is indoor, don't forget to bring your umbrellas!
+            The ceremony and reception will be held on the same location.
           </LabelSection>
 
           <section className={styles.eventDetails}>

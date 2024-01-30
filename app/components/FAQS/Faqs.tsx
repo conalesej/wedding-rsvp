@@ -108,7 +108,7 @@ const TimeLineComponent = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Typography>
-            Experience the journey of love through a Growing UP AVP and Prenup
+            Experience the journey of love through a Growing up AVP and Prenup
             AVP, followed by the suspense of Raffle Part 2.
           </Typography>
         </TimelineContent>
