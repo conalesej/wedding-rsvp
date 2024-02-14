@@ -87,7 +87,7 @@ const Attire = () => {
             <div className={styles.side}>
               <header>GENTLEMEN</header>
               <Divider orientation="horizontal" />
-              <p className={styles.attireName}>Barong Tagalog & Black Slacks</p>
+              <p className={styles.attireName}>Long-sleeve Barong Tagalog & Black Slacks</p>
             </div>
           </section>
 
